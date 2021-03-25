@@ -1,0 +1,27 @@
+<main>
+    <!-- looping through the array -->
+    <% for( let i = 0; i < data.length ; i++) { %>
+        <div class="card my-4 mx-auto bg-dark border border-success" style="width: 70%; min-height: 350px ;box-shadow: 0px 5px 5px 3px #28a745;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <!-- taking the thumb image of game from the array -->
+                    <img class="card-img" src=<%= data[i].thumb %> alt="image of game">
+                </div>
+                <div class="col-md-8">
+                    <div class="car-body">
+                        <div class="row mt-4">
+                            <!-- taking the title of game from the array -->
+                            <h5 class="card-title col-sm p-3 text-white" style="font-size: 23px;"><%= data[i].title %></h5>
+                            <div class="col-sm ">
+                                <!-- taking the sale price of game from the array -->
+                                <p class="d-flex justify-content-end px-3 py-3 text-success" style="font-size: 30px;"><strong><%= data[i].salePrice %>&#36;</strong></p>
+                                <!-- taking the normal price of game from the array -->
+                                <p class="d-flex justify-content-end px-3 text-muted" style="font-size: 25px;"><s><%= data[i].normalPrice %>&#36;</s></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% } %>
+</main>
